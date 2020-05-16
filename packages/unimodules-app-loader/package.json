@@ -21,5 +21,13 @@
   "devDependencies": {
     "expo-module-scripts": "^1.2.0"
   },
-  "gitHead": "ff1a0d367a46126309e0facf64e32c87c754389c"
+  "gitHead": "ff1a0d367a46126309e0facf64e32c87c754389c",
+  "files": [
+    "android/src",
+    "android/build.gradle",
+    "ios",
+    "build",
+    "*.js",
+    "*.json"
+  ]
 }
