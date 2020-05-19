@@ -49,6 +49,10 @@ public class AppLoaderProvider {
     if (loaderClass == null) {
       String loaderClassName = getSharedPreferences(context)
         .getString(appLoaderKey(name), null);
+      // Hack for those users transitioning from Managed to Bare
+      if ("host.exp.exponent.t.c".equals(loaderClassName)) {
+        loaderClassName = "org.unimodules.adapters.react.apploader.RNHeadlessAppLoader";
+      }
       if (loaderClassName != null) {
         loaderClass = Class.forName(loaderClassName);
       }
